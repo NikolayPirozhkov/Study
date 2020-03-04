@@ -6,7 +6,7 @@
 
 public class Main {
     boolean swap(int i, int j, int[] anArray){
-        if(i < anArray.length || j < anArray.length){
+        if(i <= anArray.length-1 && j <= anArray.length-1){
             int temp = anArray[i];
             anArray[i] = anArray[j];
             anArray[j] = temp;
@@ -15,6 +15,8 @@ public class Main {
         return false;
     }
     public static void main(String[] args) {
-        // write your code here
+
+        MainTest test = new MainTest();
+        test.swapTest();
     }
 }
