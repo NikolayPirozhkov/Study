@@ -1,7 +1,7 @@
-/**
- * @author NikolayPirozhkov
- * @project Java
- */
+
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * "Имеется класс Spaceship. Создайте 3 экземпляра. Напишите методы, которые находят:
@@ -24,7 +24,26 @@
  * Вот так можно создать один экземпляр и передать значение скорости 123:
  * Spaceship s1 = new Spaceship(123);"
  */
+
 public class Main {
+    public int minSpaceShipSpeed(List<Spaceship> ships){
+        int minShipsSpeed = Integer.MAX_VALUE;
+        for (var ship:ships){
+            if(ship.getSpeed() < minShipsSpeed){
+                minShipsSpeed = ship.getSpeed();
+            }
+        }
+        return minShipsSpeed;
+    }
+
+    public int avgSpaceShipSpeed(List<Spaceship> ships){
+
+        int sumForAvg = 0;
+        for (var ship:ships){
+            sumForAvg += ship.getSpeed();
+        }
+        return sumForAvg/ships.size();
+    }
     public static void main(String[] args) {
 
     }
