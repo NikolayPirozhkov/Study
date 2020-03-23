@@ -1,8 +1,5 @@
 
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * "Имеется класс Spaceship. Создайте 3 экземпляра. Напишите методы, которые находят:
  * a) среднюю скорость кораблей
@@ -26,25 +23,6 @@ import java.util.List;
  */
 
 public class Main {
-    public int minSpaceShipSpeed(List<Spaceship> ships){
-        int minShipsSpeed = Integer.MAX_VALUE;
-        for (var ship:ships){
-            if(ship.getSpeed() < minShipsSpeed){
-                minShipsSpeed = ship.getSpeed();
-            }
-        }
-        return minShipsSpeed;
-    }
-
-    public int avgSpaceShipSpeed(List<Spaceship> ships){
-
-        int sumForAvg = 0;
-        for (var ship:ships){
-            sumForAvg += ship.getSpeed();
-        }
-        return sumForAvg/ships.size();
-    }
     public static void main(String[] args) {
-
     }
 }

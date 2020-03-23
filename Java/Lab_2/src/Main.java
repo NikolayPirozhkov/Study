@@ -4,11 +4,7 @@
     находящий минимальный из трех аргументов
  */
 public class Main {
-    public int min(int a, int b, int c){
 
-        //return a > b ? (a > c ? a : c) : b;
-        return Math.min(Math.min(a, b), c);
-    }
     public static void main(String[] args) {
 
     }
