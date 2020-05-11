@@ -1,3 +1,4 @@
+import java.math.BigInteger;
 import java.util.List;
 
 /**
@@ -5,7 +6,7 @@ import java.util.List;
  * @project Java
  */
 public class SpaceShipCalc {
-    public int minSpaceShipSpeed(List<Spaceship> ships){
+    public int minSpaceShipSpeed(Iterable<Spaceship> ships){
         int minShipsSpeed = Integer.MAX_VALUE;
         for (var ship:ships){
             if(ship.getSpeed() < minShipsSpeed){
@@ -16,11 +17,11 @@ public class SpaceShipCalc {
     }
 
     public int avgSpaceShipSpeed(List<Spaceship> ships){
-
-        int sumForAvg = 0;
+        BigInteger bigInteger = BigInteger.valueOf(0);
         for (var ship:ships){
-            sumForAvg += ship.getSpeed();
+            bigInteger = bigInteger.add(BigInteger.valueOf(ship.getSpeed()));
         }
-        return sumForAvg/ships.size();
+        bigInteger = bigInteger.divide(BigInteger.valueOf(ships.size()));
+        return bigInteger.intValue();
     }
 }
